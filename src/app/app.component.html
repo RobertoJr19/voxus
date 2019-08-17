@@ -1,0 +1,17 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container-fluid">
+  <div class="imagemLogo">
+    <img src="../assets/logo.svg" alt="imagem">
+  </div>
+</div>
+<div class="container">
+  <app-form></app-form>
+</div>
+<footer>
+  <div class="rodape">
+    <img src="../assets/logo.svg" alt="imagem">
+    <ul class="rodapeLista" *ngFor="let item of lista">
+      <li> {{ item }} </li>
+    </ul>
+  </div>
+</footer>
