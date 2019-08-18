@@ -12,7 +12,6 @@
                 <input id="nomeCompleto" type="text" size="30" formControlName="nomeCompleto" pInputText>
                 <label for="nomeCompleto">Nome Completo</label>
             </span>
-            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
         </div>
         <div class="campo">
             <span class="ui-float-label">
@@ -20,34 +19,29 @@
                     formControlName="telefone" pInputText>
                 <label for="telefone">Telefone</label>
             </span>
-            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
         </div>
         <div class="campo">
             <span class="ui-float-label">
                 <input id="email" type="email" size="30" formControlName="email" pInputText>
                 <label for="email">Endereço de e-mail</label>
             </span>
-            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
         </div>
         <div class="campo">
             <span class="ui-float-label">
                 <input id="nomeEmpresa" type="text" size="30" formControlName="nomeEmpresa" pInputText>
                 <label for="nomeEmpresa">Nome da empresa</label>
             </span>
-            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
         </div>
         <div class="campo">
             <span class="ui-float-label">
                 <input id="site" type="text" size="30" formControlName="site" pInputText>
                 <label for="site">URL do site</label>
             </span>
-            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
         </div>
         <div class="campo">
             <span class="ui-float-label">
                 <p-dropdown [options]="valores" formControlName="verba"></p-dropdown>
             </span>
-            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
         </div>
     </form>
     <form class="formCad" [formGroup]="formCadastro" *ngIf="confirmado">
