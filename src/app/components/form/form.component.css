@@ -1,0 +1,91 @@
+.titulo1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    text-align: center;
+    color: #2D3A40;
+}
+.titulo2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 26px;    
+    text-align: center;
+    color: #748296;
+}
+
+.formulario{
+    background-color: #FFFFFF;
+    border-radius: 3px;
+    width: 650px;
+    padding-top: 30px;
+    margin: 0 auto;
+}
+
+.formCad{
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+
+button{
+    width: 250px;
+    height: 42px;
+    color: #FFFFFF;
+    background: #14E298;
+    border-radius: 3px;
+    margin: 50px auto;
+    text-align: center;    
+}
+
+.btn2{
+    color: #14E298;
+    background: #FFFFFF;
+    border: 2px solid #14E298;
+}
+
+
+.areaBotao{
+    width: 650px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.btn1:hover{
+    background: #23F7AB;
+}
+
+.campo{
+    margin: 50px;
+}
+
+.campo label {
+    margin-left: 0px;
+}
+
+.campo span{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';    
+    height: 30px; 
+}
+
+.campo span input{
+    padding: 5px 30px;
+}
+
+.alerta{
+    font-size: 14px;
+    height: 36px;
+    margin: 30px;
+}
+
+.msgRodape{
+    width: 650px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px;
+}
+

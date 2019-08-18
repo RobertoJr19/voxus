@@ -1,1 +1,115 @@
-<p>form works!</p>
+<div class="titulo1">
+    <p>Você está a poucos passos de otimizar suas campanhas!</p>
+</div>
+<div class="titulo2">
+    <p>Queremos conhecer mais sobre sua empresa para melhorar sua experiência com a Voxus.</p>
+</div>
+<div class="formulario">
+
+    <form class="formCad" [formGroup]="formCadastro" *ngIf="!confirmado">
+        <div class="campo">
+            <span class="ui-float-label">
+                <input id="nomeCompleto" type="text" size="30" formControlName="nomeCompleto" pInputText>
+                <label for="nomeCompleto">Nome Completo</label>
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
+        </div>
+        <div class="campo">
+            <span class="ui-float-label">
+                <input id="telefone" type="text" size="30" prefix="+55 " mask="(00) 0000-0000"
+                    formControlName="telefone" pInputText>
+                <label for="telefone">Telefone</label>
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
+        </div>
+        <div class="campo">
+            <span class="ui-float-label">
+                <input id="email" type="email" size="30" formControlName="email" pInputText>
+                <label for="email">Endereço de e-mail</label>
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
+        </div>
+        <div class="campo">
+            <span class="ui-float-label">
+                <input id="nomeEmpresa" type="text" size="30" formControlName="nomeEmpresa" pInputText>
+                <label for="nomeEmpresa">Nome da empresa</label>
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
+        </div>
+        <div class="campo">
+            <span class="ui-float-label">
+                <input id="site" type="text" size="30" formControlName="site" pInputText>
+                <label for="site">URL do site</label>
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
+        </div>
+        <div class="campo">
+            <span class="ui-float-label">
+                <p-dropdown [options]="valores" formControlName="verba"></p-dropdown>
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="campoInvalido"></p-message>
+        </div>
+    </form>
+    <form class="formCad" [formGroup]="formCadastro" *ngIf="confirmado">
+        <div class="campo">
+            <label for="nomeCompleto">Nome Completo:</label>
+            <span class="ui-float-label">
+                <input id="nomeCompleto" type="text" size="30" formControlName="nomeCompleto" pInputText>
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="!formCadastro.valid"></p-message>
+        </div>
+        <div class="campo">
+            <label for="telefone">Telefone:</label>
+            <span class="ui-float-label">
+                <input id="telefone" type="text" size="30" prefix="+55 " mask="(00) 0000-0000"
+                    formControlName="telefone" pInputText>
+
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="!formCadastro.valid"></p-message>
+        </div>
+        <div class="campo">
+            <label for="email">Endereço de e-mail:</label>
+            <span class="ui-float-label">
+                <input id="email" type="email" size="30" formControlName="email" pInputText>
+
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="!formCadastro.valid"></p-message>
+        </div>
+        <div class="campo">
+            <label for="nomeEmpresa">Nome da empresa: </label>
+            <span class="ui-float-label">
+                <input id="nomeEmpresa" type="text" size="30" formControlName="nomeEmpresa" pInputText>
+
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="!formCadastro.valid"></p-message>
+        </div>
+        <div class="campo">
+            <label for="site">URL do site: </label>
+            <span class="ui-float-label">
+                <input id="site" type="text" size="30" formControlName="site" pInputText>
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="!formCadastro.valid"></p-message>
+        </div>
+        <div class="campo">
+            <span class="ui-float-label">
+                <label for="site">Verba: </label>
+                <p-dropdown [options]="valores" formControlName="verba"></p-dropdown>
+            </span>
+            <p-message severity="error" text="Campo Obrigatório" *ngIf="!formCadastro.valid"></p-message>
+        </div>
+    </form>
+
+    <div class="areaBotao">
+        <button *ngIf="!confirmado" (click)="confirmar()" class="btn1">{{ mensagem }}</button>
+        <button *ngIf="confirmado" (click)="confirmar()" class="btn2">{{ mensagem }}</button>
+        <div *ngIf="confirmado" class="alerta">
+            <p>Entraremos em contato em até 24hs úteis.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="msgRodape alerta" *ngIf="confirmado">
+    <p>*Para usar o trial grátis você precisa ser um e-commerce e concordar com os termos e requisitos do trial
+        gratuito. Saiba mais em: <a href="">Termos e requisitos de trial gratuito</a></p>
+</div>
